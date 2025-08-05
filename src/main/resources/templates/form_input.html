@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Input</title>
+    <link rel="stylesheet" href="/css/commonStyles.css" />
+  </head>
+  <body>
+    <h1>Enter New Data</h1>
+
+    <div class="form-container">
+      <form action="#" th:action="@{/save-data}" th:object="${testFormData}" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" th:field="*{name}" required />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <a href="/" class="back-link">Go back to Home</a>
+  </body>
+</html>

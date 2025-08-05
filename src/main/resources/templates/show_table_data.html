@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Test Data</title>
+    <link rel="stylesheet" href="/css/commonStyles.css" />
+  </head>
+  <body>
+    <h1>All Test Data</h1>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="data : ${allTestData}">
+          <td th:text="${data.id}"></td>
+          <td th:text="${data.name}"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <a href="/" class="back-link">Back to Home</a>
+  </body>
+</html>

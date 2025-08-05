@@ -1,0 +1,161 @@
+:root {
+  /* Colors */
+  --primary-color: #007bff; /* Used for main links/buttons */
+  --secondary-color: #28a745; /* Used for success buttons */
+  --dark-text: #333;
+  --medium-text: #555;
+  --light-gray: #f4f4f4; /* Background color */
+  --border-color: #ccc;
+  --table-header-bg: #4caf50;
+  --table-even-row: #f2f2f2;
+  --hover-bg: #e2e2e2;
+  --error-color: red;
+  --success-color: green;
+
+  /* Spacing */
+  --spacing-small: 8px;
+  --spacing-medium: 10px;
+  --spacing-large: 20px;
+  --spacing-xl: 30px;
+  --spacing-xxl: 40px;
+
+  /* Border Radius */
+  --border-radius-small: 4px;
+  --border-radius-medium: 5px;
+  --border-radius-large: 8px;
+
+  /* Box Shadow */
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  /* Font */
+  --font-family-base: Arial, sans-serif;
+  --font-size-base: 1em;
+  --font-size-button: 1.1em;
+}
+
+body {
+  font-family: var(--font-family-base);
+  margin: var(--spacing-xxl);
+  text-align: center;
+  background-color: var(--light-gray);
+}
+
+h1 {
+  color: var(--dark-text);
+}
+
+.form-container {
+  background-color: white;
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--box-shadow);
+  display: inline-block;
+  margin-top: var(--spacing-large);
+}
+
+label {
+  display: block;
+  margin-bottom: var(--spacing-small);
+  font-weight: bold;
+  color: var(--medium-text);
+}
+
+input[type="text"] {
+  width: 250px;
+  padding: var(--spacing-medium);
+  margin-bottom: var(--spacing-large);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-small);
+  font-size: var(--font-size-base);
+}
+
+button {
+  padding: var(--spacing-medium) var(--spacing-large);
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-medium);
+  cursor: pointer;
+  font-size: var(--font-size-button);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838; /* Slightly darker secondary color */
+}
+
+.button-container {
+  margin-top: var(--spacing-xl);
+}
+
+.button-container a {
+  display: inline-block;
+  padding: 12px 25px; /* Specific padding for anchor buttons */
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--border-radius-medium);
+  font-size: var(--font-size-button);
+  transition: background-color 0.3s ease;
+}
+
+.button-container a:hover {
+  background-color: #0056b3; /* Slightly darker primary color */
+}
+
+.back-link {
+  display: block;
+  margin-top: var(--spacing-large);
+  color: var(--primary-color);
+  text-decoration: none;
+  text-align: center; /* Applied to both .back-link definitions */
+  font-weight: bold; /* Applied to both .back-link definitions */
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Table styles */
+table {
+  width: 80%;
+  margin: var(--spacing-xl) auto;
+  border-collapse: collapse;
+  box-shadow: var(--box-shadow);
+  background-color: white;
+}
+
+th,
+td {
+  border: 1px solid var(--border-color);
+  padding: 12px 15px; /* Specific padding for table cells */
+  text-align: left;
+}
+
+th {
+  background-color: var(--table-header-bg);
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+tr:nth-child(even) {
+  background-color: var(--table-even-row);
+}
+
+tr:hover {
+  background-color: var(--hover-bg);
+}
+
+.success-message {
+  color: var(--success-color);
+  font-weight: bold;
+  margin-top: var(--spacing-medium);
+}
+
+.error-message {
+  color: var(--error-color);
+  font-weight: bold;
+  margin-top: var(--spacing-medium);
+}
